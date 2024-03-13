@@ -1,0 +1,51 @@
+  1 : *a -> aA*
+  2 : *b -> bB*
+  3 : * -> #
+  4 : Aa -> aA
+  5 : Ab -> bA
+  6 : Bb -> bB
+  7 : Ba -> aB
+  8 : A# -> #a
+  9 : B# -> #b
+ 10 : # -> x
+ 11 : -> *
+
+--- : abaa
+
+abaa
+ -11-> *
+*abaa
+*a -1-> aA*
+aA*baa
+  *b -2-> bB*
+aAbB*aa
+    *a -1-> aA*
+aAbBaA*a
+      *a -1-> aA*
+aAbBaAaA*
+        * -3-> #
+aAbBaAaA#
+     Aa -4-> aA
+aAbBaaAA#
+ Ab -5-> bA
+abABaaAA#
+   Ba -7-> aB
+abAaBaAA#
+  Aa -4-> aA
+abaABaAA#
+    Ba -7-> aB
+abaAaBAA#
+   Aa -4-> aA
+abaaABAA#
+       A# -8-> #a
+abaaABA#a
+      A# -8-> #a
+abaaAB#aa
+     B# -9-> #b
+abaaA#baa
+    A# -8-> #a
+abaa#abaa
+    # -10-> 
+***__FINAL_RULE__***
+
+abaaabaa
